@@ -13,6 +13,7 @@ namespace Gallery
 {
     public partial class Form1 : Form
     {
+        public Random random = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace Gallery
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile(@"C:/Users/vadim_oyanwuw/source/repos/Gallery/Gallery/Photo/photo"+ random.Next(1,7)+".png");
         }
 
         private void button2_Click(object sender, EventArgs e)
